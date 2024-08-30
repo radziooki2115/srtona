@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('pexels-pixabay-355887.jpg'); /* Ścieżka do obrazu w tle */
+    background-size: cover; /* Dopasowanie obrazu do całej strony */
+    background-position: center; /* Wyśrodkowanie obrazu */
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    font-size: 150px; /* Zwiększenie rozmiaru tekstu */
+    font-weight: bold;
+}
+
+.container a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.underline-solid {
+    text-decoration: underline;
+}
+
+.underline-dotted {
+    text-decoration: underline dotted;
+}
+
+
+.underline-solid:hover {
+    color: rgb(236, 67, 228);
+}
+
+.underline-dotted:hover {
+    color: rgb(53, 218, 230);
+}
