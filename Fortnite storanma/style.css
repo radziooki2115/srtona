@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #1e1e2e, #2a2a40);
+    color: #ffffff;
+    font-family: "Arial", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Po bokach na PC */
+    align-items: center;
+    width: 80%;
+    max-width: 1200px; /* Ograniczenie szerokości kontenera */
+}
+
+.text {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    color: #f7d94c;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    flex: 1; /* Tekst rozciąga się między GIF-ami */
+}
+
+.gif {
+    width: 100%; /* Domyślnie zajmuje pełną szerokość */
+    max-width: 300px; /* Maksymalna szerokość GIF-a */
+    text-align: center;
+    flex: 0 0 auto; /* Stała szerokość dla GIF-ów */
+}
+
+/* Styl dla ekranów większych niż 768px */
+@media (min-width: 769px) {
+    .container {
+        flex-direction: row; /* Poziomy układ na PC */
+        justify-content: space-between;
+    }
+
+    .gif {
+        max-width: 200px; /* GIF-y węższe na komputerach */
+    }
+}
+
+/* Styl dla ekranów o szerokości mniejszej niż 768px (telefony i tablety) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Pionowy układ na telefonach */
+        align-items: center;
+        gap: 20px; /* Odstępy między elementami */
+    }
+
+    .text {
+        font-size: 3.5rem; /* Zmniejszony rozmiar tekstu na telefonach */
+    }
+
+    .gif {
+        max-width: 250px; /* GIF-y większe w pionowym układzie */
+    }
+}
+
+/* Styl dla bardzo małych ekranów (telefony) */
+@media (max-width: 480px) {
+    .text {
+        font-size: 2.5rem; /* Dodatkowe zmniejszenie tekstu */
+    }
+
+    .gif {
+        max-width: 200px; /* GIF-y jeszcze mniejsze */
+    }
+}
